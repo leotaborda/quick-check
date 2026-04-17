@@ -1,7 +1,6 @@
 (function () {
   'use strict';
 
-  // ── Navigation ──────────────────────────────────────────────────────────────
   const navLinks   = document.querySelectorAll('.nav-link[data-section]');
   const sections   = document.querySelectorAll('.section');
   const nav        = document.querySelector('.nav');
@@ -13,7 +12,6 @@
     const link   = document.querySelector(`.nav-link[data-section="${id}"]`);
     if (target) { target.classList.add('active'); window.scrollTo({ top: 0, behavior: 'instant' }); }
     if (link)   link.classList.add('active');
-    // Kick animations
     setTimeout(observeAnimations, 60);
     setTimeout(observeCounters, 80);
   }
@@ -27,7 +25,6 @@
     nav.classList.toggle('scrolled', window.scrollY > 8);
   }, { passive: true });
 
-  // ── Intersection Observer: fade-up & stagger ────────────────────────────────
   let animIO = null;
   function observeAnimations() {
     if (animIO) animIO.disconnect();
@@ -41,7 +38,6 @@
       .forEach(el => animIO.observe(el));
   }
 
-  // ── Counter animation ────────────────────────────────────────────────────────
   let counterIO = null;
   function observeCounters() {
     if (counterIO) counterIO.disconnect();
@@ -71,7 +67,6 @@
       .forEach(el => counterIO.observe(el));
   }
 
-  // ── Magnetic button effect ───────────────────────────────────────────────────
   document.querySelectorAll('.btn-accent, .nav-cta').forEach(btn => {
     btn.addEventListener('mousemove', e => {
       const r = btn.getBoundingClientRect();
@@ -84,11 +79,9 @@
     });
   });
 
-  // ── Overview card routing ────────────────────────────────────────────────────
   document.querySelectorAll('.overview-card[data-goto]').forEach(card => {
     card.style.cursor = 'pointer';
   });
 
-  // ── Init ────────────────────────────────────────────────────────────────────
   showSection('home');
 }());
