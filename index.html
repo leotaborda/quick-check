@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick-Check — Alinhamento entre Colaboradores e Gestão</title>
+  <meta name="description" content="Guia completo do Quick-Check: alinhamento, feedback contínuo e desenvolvimento profissional.">
+  <link rel="icon" type="image/png" href="public/favicon.png">
+  <link rel="apple-touch-icon" href="public/favicon.png">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<!-- SVG ICON SPRITE -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="ic-check" viewBox="0 0 20 20" fill="none">
+    <path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-x" viewBox="0 0 20 20" fill="none">
+    <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-arrow-right" viewBox="0 0 20 20" fill="none">
+    <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-map" viewBox="0 0 20 20" fill="none">
+    <path d="M7 3l6 2 4-2v13l-4 2-6-2-4 2V5l4-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M7 3v13M13 5v13" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="ic-clock" viewBox="0 0 20 20" fill="none">
+    <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M10 6v4l2.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-calendar" viewBox="0 0 20 20" fill="none">
+    <rect x="3" y="5" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M3 9h14M7 3v4M13 3v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-users" viewBox="0 0 20 20" fill="none">
+    <circle cx="8" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M2 17c0-3.314 2.686-5 6-5s6 1.686 6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M13 4a3 3 0 010 6M18 17c0-2.761-2-4.5-5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-message" viewBox="0 0 20 20" fill="none">
+    <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v7a2 2 0 01-2 2H9l-4 3V14H5a2 2 0 01-2-2V5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-shield" viewBox="0 0 20 20" fill="none">
+    <path d="M10 2l6 2.5V10c0 3.5-3 6-6 7.5C7 16 4 13.5 4 10V4.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-target" viewBox="0 0 20 20" fill="none">
+    <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="10" cy="10" r="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="ic-trending" viewBox="0 0 20 20" fill="none">
+    <path d="M3 14l4-5 3 3 4-5 3 2" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 7h3v3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-eye" viewBox="0 0 20 20" fill="none">
+    <path d="M2 10s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="ic-link" viewBox="0 0 20 20" fill="none">
+    <path d="M8.5 11.5a4.5 4.5 0 006.364 0l1.768-1.768a4.5 4.5 0 00-6.364-6.364L9.5 4.636" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M11.5 8.5a4.5 4.5 0 00-6.364 0L3.368 10.268a4.5 4.5 0 006.364 6.364l.768-.768" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-light" viewBox="0 0 20 20" fill="none">
+    <circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.22 4.22l1.42 1.42M14.36 14.36l1.42 1.42M4.22 15.78l1.42-1.42M14.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-flag" viewBox="0 0 20 20" fill="none">
+    <path d="M4 3v14M4 3l12 4-12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-book" viewBox="0 0 20 20" fill="none">
+    <path d="M4 4h7a3 3 0 013 3v9a3 3 0 00-3-3H4V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M16 13a3 3 0 00-3-3H4" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M9 7v0M9 10v0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-bolt" viewBox="0 0 20 20" fill="none">
+    <path d="M11 2L4 12h6l-1 6 7-10h-6l1-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-refresh" viewBox="0 0 20 20" fill="none">
+    <path d="M4 4v5h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16 16v-5h-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M4.5 9A6.5 6.5 0 0115 5.5M15.5 11A6.5 6.5 0 015 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-mic" viewBox="0 0 20 20" fill="none">
+    <rect x="7" y="2" width="6" height="9" rx="3" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M4 10a6 6 0 0012 0M10 17v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-clipboard" viewBox="0 0 20 20" fill="none">
+    <path d="M8 3H5a2 2 0 00-2 2v11a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2h-3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <rect x="7" y="1" width="6" height="4" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M7 11h6M7 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-chat" viewBox="0 0 20 20" fill="none">
+    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v9a1 1 0 01-1 1H7l-4 3V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-mail" viewBox="0 0 20 20" fill="none">
+    <rect x="2" y="5" width="16" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-grid" viewBox="0 0 20 20" fill="none">
+    <rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+    <rect x="11" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+    <rect x="2" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+    <rect x="11" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="ic-leaf" viewBox="0 0 20 20" fill="none">
+    <path d="M10 17C7 17 3 14 3 8c4 0 9 2 11 7a6 6 0 01-4 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M10 17V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-warning" viewBox="0 0 20 20" fill="none">
+    <path d="M9.13 3.5L2.12 15a1 1 0 00.87 1.5h14a1 1 0 00.87-1.5L10.87 3.5a1 1 0 00-1.74 0z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M10 8v4M10 14.5v.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-person" viewBox="0 0 20 20" fill="none">
+    <circle cx="10" cy="6" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M3 18c0-3.866 3.134-6 7-6s7 2.134 7 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-zap" viewBox="0 0 20 20" fill="none">
+    <path d="M10.5 2L3 12h7l-.5 6L17 8h-7l.5-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-chart" viewBox="0 0 20 20" fill="none">
+    <path d="M3 16V8M7 16V5M11 16v-6M15 16V2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-list" viewBox="0 0 20 20" fill="none">
+    <path d="M7 5h10M7 10h10M7 15h10M3 5h.01M3 10h.01M3 15h.01" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-pin" viewBox="0 0 20 20" fill="none">
+    <path d="M12 2l2 2-1 4 3 3-5 1-3 4-3-4-5-1 3-3-1-4 2-2 4 3 4-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-play" viewBox="0 0 20 20" fill="none">
+    <path d="M5 3l12 7-12 7V3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-layers" viewBox="0 0 20 20" fill="none">
+    <path d="M10 2l8 4-8 4-8-4 8-4zM2 10l8 4 8-4M2 14l8 4 8-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-ok" viewBox="0 0 20 20" fill="none">
+    <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M7 10l2 2.5 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-minus" viewBox="0 0 20 20" fill="none">
+    <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M7 10h6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<!-- ─── NAV ─── -->
+<nav class="nav" id="mainNav">
+  <div class="nav-logo">
+    <div class="nav-logo-mark">
+      <img src="public/favicon.png" alt="QC" onerror="this.style.display='none'">
+    </div>
+    Quick-Check
+  </div>
+
+  <div class="nav-links">
+    <span class="nav-link" data-section="home">Início</span>
+    <span class="nav-link" data-section="what">O que é</span>
+    <span class="nav-link" data-section="benefits">Benefícios</span>
+    <span class="nav-link" data-section="approach">Como abordar</span>
+    <span class="nav-link" data-section="tips">Dicas</span>
+    <span class="nav-link" data-section="script">Roteiro</span>
+  </div>
+
+  <button class="nav-cta" data-goto="impl">
+    <svg width="14" height="14"><use href="#ic-map"/></svg>
+    Modelo de Implementação (Passo a Passo)
+  </button>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════
+     HOME
+══════════════════════════════════════════════════════ -->
+<section class="section active" id="home">
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="hero-tag">
+          <div class="hero-tag-dot"></div>
+          <span>Gestão &amp; Comunicação</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span>Conversas</span>
+          <span>que <em>alinham.</em></span>
+        </h1>
+
+        <div class="hero-body">
+          <div>
+            <p class="body-lg">
+              O Quick-Check é uma reunião rápida e recorrente entre colaborador e gestor — sem cobranças, sem julgamentos. Só alinhamento, feedback e desenvolvimento.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" data-goto="what">
+                Explorar o guia
+                <svg width="16" height="16"><use href="#ic-arrow-right"/></svg>
+              </button>
+              <button class="btn btn-ghost" data-goto="impl">
+                <svg width="16" height="16"><use href="#ic-map"/></svg>
+                Ver implementação
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <svg width="18" height="18"><use href="#ic-clock"/></svg>
+              <div>
+                <div class="hero-meta-label">Duração</div>
+                <div class="hero-meta-value">10 a 20 minutos por sessão</div>
+              </div>
+            </div>
+            <div class="hero-meta-item">
+              <svg width="18" height="18"><use href="#ic-refresh"/></svg>
+              <div>
+                <div class="hero-meta-label">Frequência</div>
+                <div class="hero-meta-value">Semanal ou quinzenal</div>
+              </div>
+            </div>
+            <div class="hero-meta-item">
+              <svg width="18" height="18"><use href="#ic-users"/></svg>
+              <div>
+                <div class="hero-meta-label">Participantes</div>
+                <div class="hero-meta-value">Colaborador + gestor direto</div>
+              </div>
+            </div>
+            <div class="hero-meta-item">
+              <svg width="18" height="18"><use href="#ic-message"/></svg>
+              <div>
+                <div class="hero-meta-label">Formato</div>
+                <div class="hero-meta-value">Online ou presencial</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-band fade-up">
+      <div class="stat-cell">
+        <span class="stat-num" data-count="20" data-suffix="min">0min</span>
+        <div class="stat-label">Duração máxima</div>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-count="4" data-suffix="">0</span>
+        <div class="stat-label">Fases por conversa</div>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-count="8" data-suffix="">0</span>
+        <div class="stat-label">Passos de implementação</div>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" data-count="100" data-suffix="%">0%</span>
+        <div class="stat-label">Foco em pessoas</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Overview cards -->
+    <div class="sec-header-centered fade-up">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Explore o guia</div>
+      <h2 class="display-lg">Tudo que você precisa <em>saber</em></h2>
+      <p class="body-lg">Navegue pelos tópicos e aprenda como o Quick-Check pode transformar a comunicação do seu time.</p>
+    </div>
+
+    <div class="overview-grid stagger">
+      <div class="overview-card featured" data-goto="what" onclick="document.querySelector('[data-goto=what]').click()">
+        <div class="icon-box-lg ib-orange" style="margin-bottom:1.25rem">
+          <svg width="24" height="24"><use href="#ic-light"/></svg>
+        </div>
+        <div class="ov-label">Fundamentos</div>
+        <div class="ov-title">O que é o Quick-Check?</div>
+        <p class="ov-desc" style="margin-top:0.5rem">Entenda o conceito, a filosofia e por que essa prática é diferente de reuniões tradicionais de gestão.</p>
+        <div class="ov-arrow">
+          Explorar <svg width="14" height="14"><use href="#ic-arrow-right"/></svg>
+        </div>
+        <div class="ov-number">01</div>
+      </div>
+
+      <div class="overview-card" data-goto="benefits" onclick="document.querySelector('[data-goto=benefits]').click()">
+        <div class="icon-box ib-green" style="margin-bottom:1rem">
+          <svg width="18" height="18"><use href="#ic-zap"/></svg>
+        </div>
+        <div class="ov-label">Para quem</div>
+        <div class="ov-title">Benefícios para todos</div>
+        <div class="ov-arrow" style="margin-top:0.75rem">
+          Ver <svg width="14" height="14"><use href="#ic-arrow-right"/></svg>
+        </div>
+        <div class="ov-number">02</div>
+      </div>
+
+      <div class="overview-card" data-goto="approach" onclick="document.querySelector('[data-goto=approach]').click()">
+        <div class="icon-box ib-blue" style="margin-bottom:1rem">
+          <svg width="18" height="18"><use href="#ic-chat"/></svg>
+        </div>
+        <div class="ov-label">Na prática</div>
+        <div class="ov-title">Como abordar o gestor</div>
+        <div class="ov-arrow" style="margin-top:0.75rem">
+          Ver <svg width="14" height="14"><use href="#ic-arrow-right"/></svg>
+        </div>
+        <div class="ov-number">03</div>
+      </div>
+
+      <div class="overview-card" data-goto="tips" onclick="document.querySelector('[data-goto=tips]').click()">
+        <div class="icon-box ib-orange" style="margin-bottom:1rem">
+          <svg width="18" height="18"><use href="#ic-bolt"/></svg>
+        </div>
+        <div class="ov-label">Boas práticas</div>
+        <div class="ov-title">Dicas para arrasar</div>
+        <div class="ov-arrow" style="margin-top:0.75rem">
+          Ver <svg width="14" height="14"><use href="#ic-arrow-right"/></svg>
+        </div>
+        <div class="ov-number">04</div>
+      </div>
+
+      <div class="overview-card" data-goto="script" onclick="document.querySelector('[data-goto=script]').click()">
+        <div class="icon-box ib-white" style="margin-bottom:1rem">
+          <svg width="18" height="18"><use href="#ic-clipboard"/></svg>
+        </div>
+        <div class="ov-label">Roteiro</div>
+        <div class="ov-title">As 4 perguntas essenciais</div>
+        <div class="ov-arrow" style="margin-top:0.75rem">
+          Ver <svg width="14" height="14"><use href="#ic-arrow-right"/></svg>
+        </div>
+        <div class="ov-number">05</div>
+      </div>
+
+      <div class="overview-card cta-card" onclick="document.querySelector('.nav-cta').click()">
+        <div class="icon-box" style="margin-bottom:1rem;background:rgba(0,0,0,0.12);color:#000">
+          <svg width="18" height="18"><use href="#ic-layers"/></svg>
+        </div>
+        <div class="ov-label">Guia completo</div>
+        <div class="ov-title">Modelo de Implementação Passo a Passo</div>
+        <div class="ov-arrow" style="margin-top:0.75rem">
+          Acessar <svg width="14" height="14"><use href="#ic-arrow-right"/></svg>
+        </div>
+        <div class="ov-number">06</div>
+      </div>
+    </div>
+
+    <div class="qblock fade-up" style="margin-top:3.5rem">
+      <p>O Quick-Check não é sobre cobrar — é sobre <em>conectar</em>. Uma conversa curta e regular pode evitar meses de desgaste.</p>
+      <cite>— Princípio central do Quick-Check</cite>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Quick-Check</div>
+        <div class="footer-note">Guia prático · Alinhamento contínuo entre colaboradores e gestão</div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     O QUE É
+══════════════════════════════════════════════════════ -->
+<section class="section" id="what">
+  <div class="container">
+    <div style="padding: 3.5rem 0 0">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Fundamentos · 01</div>
+    </div>
+
+    <div class="what-split">
+      <!-- Visual: chat window -->
+      <div class="what-visual fade-up">
+        <div class="chat-window">
+          <div class="chat-topbar">
+            <div class="chat-dots">
+              <div class="chat-dot"></div><div class="chat-dot"></div><div class="chat-dot"></div>
+            </div>
+            <div class="chat-topbar-label">Quick-Check · Terça, 10h05</div>
+          </div>
+          <div class="chat-messages">
+            <div class="chat-msg recv">
+              <div class="chat-msg-from">Gestor</div>
+              <div class="chat-bubble">Oi! Como você está? Como foi a semana?</div>
+              <div class="chat-msg-time">10:05</div>
+            </div>
+            <div class="chat-msg sent">
+              <div class="chat-msg-from">Colaborador</div>
+              <div class="chat-bubble">Boa semana! Entreguei o relatório. Mas travei no item X — preciso de apoio nisso.</div>
+              <div class="chat-msg-time">10:06</div>
+            </div>
+            <div class="chat-msg recv">
+              <div class="chat-msg-from">Gestor</div>
+              <div class="chat-bubble">Ótimo pela entrega! Vou priorizar o desbloqueio do X com você ainda hoje.</div>
+              <div class="chat-msg-time">10:08</div>
+            </div>
+            <div class="chat-msg sent">
+              <div class="chat-msg-from">Colaborador</div>
+              <div class="chat-bubble">Perfeito. E quais são as prioridades da próxima semana?</div>
+              <div class="chat-msg-time">10:09</div>
+            </div>
+            <div class="chat-msg recv">
+              <div class="chat-msg-from">Gestor</div>
+              <div class="chat-bubble">Foco total no projeto Y. Detalho na reunião às 14h. Ótimo Quick-Check!</div>
+              <div class="chat-msg-time">10:11</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1.25rem">
+          <div class="tag tag-amber">
+            <svg width="11" height="11"><use href="#ic-shield"/></svg>
+            Sem cobrança
+          </div>
+          <div class="tag tag-amber">
+            <svg width="11" height="11"><use href="#ic-ok"/></svg>
+            Sem julgamento
+          </div>
+          <div class="tag tag-amber">
+            <svg width="11" height="11"><use href="#ic-target"/></svg>
+            Foco em alinhamento
+          </div>
+          <div class="tag tag-green">
+            <svg width="11" height="11"><use href="#ic-refresh"/></svg>
+            Feedback contínuo
+          </div>
+          <div class="tag tag-blue">
+            <svg width="11" height="11"><use href="#ic-bolt"/></svg>
+            Suporte real
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="what-content">
+        <h2 class="display-lg" style="margin-bottom:1.5rem">Uma conversa rápida que <em>muda tudo</em></h2>
+        <p class="body-lg">O Quick-Check é uma reunião curta e recorrente — de 10 a 20 minutos — entre colaborador e gestor direto. Diferente de avaliações formais ou reuniões longas, ele é leve, focado e sem julgamentos.</p>
+        <p class="body-md" style="margin-top:1rem">Seu objetivo é criar um espaço seguro para alinhar expectativas, compartilhar status, dar e receber feedback, identificar bloqueios e definir próximos passos antes que pequenos problemas virem grandes conflitos.</p>
+
+        <div class="pillars" style="margin-top:2.5rem">
+          <div class="pillar">
+            <div class="pillar-num">01</div>
+            <div class="pillar-text">
+              <h4>Alinhamento contínuo</h4>
+              <p>Todos na mesma página sobre prioridades e entregas — toda semana, sem acúmulo.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">02</div>
+            <div class="pillar-text">
+              <h4>Feedback de qualidade</h4>
+              <p>Rápido, claro e objetivo — em ambas as direções. A via é sempre dupla.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">03</div>
+            <div class="pillar-text">
+              <h4>Desenvolvimento real</h4>
+              <p>Identificar dificuldades cedo e agir com suporte — antes de virarem problemas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-inner"><div class="footer-logo">Quick-Check</div><div class="footer-note">Guia prático · Alinhamento contínuo</div></div></div></footer>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     BENEFÍCIOS
+══════════════════════════════════════════════════════ -->
+<section class="section" id="benefits">
+  <div class="container">
+    <div style="padding: 3.5rem 0 0">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Para todos · 02</div>
+    </div>
+
+    <div class="sec-header fade-up" style="margin-top:1.5rem">
+      <h2 class="display-lg">Benefícios que <em>todos</em> sentem</h2>
+      <p class="body-lg" style="margin-top:1rem;max-width:52ch">O Quick-Check cria valor em todas as direções — para quem participa e para o time como um todo.</p>
+    </div>
+
+    <div class="benefits-split stagger">
+      <!-- Colaborador -->
+      <div class="benefit-panel" style="background:var(--surface)">
+        <div class="benefit-panel-header">
+          <div class="icon-box-lg ib-green">
+            <svg width="22" height="22"><use href="#ic-person"/></svg>
+          </div>
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.25rem"><span style="color:var(--accent-3)">●</span> Para o Colaborador</div>
+            <h3 class="display-md">Espaço para <em>crescer</em></h3>
+          </div>
+        </div>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <svg width="16" height="16"><use href="#ic-shield"/></svg>
+            <div class="benefit-item-text">
+              <strong>Espaço seguro para feedback</strong>
+              <span>Ambiente sem julgamentos para compartilhar dificuldades, dúvidas e conquistas com o gestor.</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <svg width="16" height="16"><use href="#ic-target"/></svg>
+            <div class="benefit-item-text">
+              <strong>Clareza de expectativas</strong>
+              <span>Saber exatamente o que é esperado evita retrabalho, frustrações e desgastes desnecessários.</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <svg width="16" height="16"><use href="#ic-book"/></svg>
+            <div class="benefit-item-text">
+              <strong>Desenvolvimento profissional</strong>
+              <span>Conversas regulares de orientação ajudam a identificar gaps e evoluir na carreira.</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <svg width="16" height="16"><use href="#ic-bolt"/></svg>
+            <div class="benefit-item-text">
+              <strong>Desbloqueio ágil</strong>
+              <span>Compartilhar bloqueios com o gestor gera suporte mais rápido e evita atrasos.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gestor -->
+      <div class="benefit-panel" style="background:var(--surface)">
+        <div class="benefit-panel-header">
+          <div class="icon-box-lg ib-blue">
+            <svg width="22" height="22"><use href="#ic-eye"/></svg>
+          </div>
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.25rem"><span style="color:var(--accent-2)">●</span> Para o Gestor</div>
+            <h3 class="display-md">Visibilidade para <em>liderar</em></h3>
+          </div>
+        </div>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <svg width="16" height="16"><use href="#ic-eye"/></svg>
+            <div class="benefit-item-text">
+              <strong>Visibilidade do time</strong>
+              <span>Visão clara do andamento, do humor do time e dos riscos antes que escalem.</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <svg width="16" height="16"><use href="#ic-shield"/></svg>
+            <div class="benefit-item-text">
+              <strong>Redução de conflitos futuros</strong>
+              <span>Conversas frequentes evitam o acúmulo de insatisfações que explodem nas piores horas.</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <svg width="16" height="16"><use href="#ic-link"/></svg>
+            <div class="benefit-item-text">
+              <strong>Canal de comunicação aberto</strong>
+              <span>Linha direta que facilita ajustes rápidos de rota e prioridade.</span>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <svg width="16" height="16"><use href="#ic-trending"/></svg>
+            <div class="benefit-item-text">
+              <strong>Identificação de talentos</strong>
+              <span>Ouvir de perto revela capacidades que não aparecem em reuniões coletivas.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qblock fade-up">
+      <p>Quando todos se comunicam melhor, <em>o resultado do time inteiro melhora</em>. O Quick-Check cria uma cultura de confiança que se expande além da conversa 1:1.</p>
+      <cite>— Impacto organizacional do Quick-Check</cite>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="sec-header-centered fade-up">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Resultados esperados</div>
+      <h2 class="display-lg">Indicadores de <em>sucesso</em></h2>
+    </div>
+
+    <div class="indicators-strip stagger">
+      <div class="indicator-card">
+        <svg width="28" height="28"><use href="#ic-trending"/></svg>
+        <h4>Menos retrabalho</h4>
+        <p>Erros por falta de alinhamento caem significativamente</p>
+      </div>
+      <div class="indicator-card">
+        <svg width="28" height="28"><use href="#ic-target"/></svg>
+        <h4>Clareza nas entregas</h4>
+        <p>Expectativas bem definidas e acordadas entre as partes</p>
+      </div>
+      <div class="indicator-card">
+        <svg width="28" height="28"><use href="#ic-zap"/></svg>
+        <h4>Mais engajamento</h4>
+        <p>Pessoas que se sentem ouvidas produzem mais e melhor</p>
+      </div>
+      <div class="indicator-card">
+        <svg width="28" height="28"><use href="#ic-link"/></svg>
+        <h4>Comunicação fluida</h4>
+        <p>Menos barreiras entre equipe e gestão no dia a dia</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-inner"><div class="footer-logo">Quick-Check</div><div class="footer-note">Guia prático · Alinhamento contínuo</div></div></div></footer>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     COMO ABORDAR
+══════════════════════════════════════════════════════ -->
+<section class="section" id="approach">
+  <div class="container">
+    <div style="padding: 3.5rem 0 0">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Na prática · 03</div>
+    </div>
+
+    <div class="sec-header fade-up" style="margin-top:1.5rem">
+      <h2 class="display-lg">Como <em>abordar</em> o gestor</h2>
+      <p class="body-lg" style="margin-top:1rem;max-width:52ch">Propor um Quick-Check pode parecer difícil. Com as estratégias certas, a conversa flui de forma natural.</p>
+    </div>
+
+    <div class="approach-layout">
+      <div class="approach-steps fade-up">
+        <div class="approach-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Combine previamente</h4>
+            <p>Não chegue de surpresa. Sinalize ao gestor que gostaria de um momento de alinhamento — por mensagem, e-mail ou pessoalmente. Demonstra respeito pela agenda dele.</p>
+          </div>
+        </div>
+        <div class="approach-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Escolha o momento certo</h4>
+            <p>Evite propor em momentos de alta pressão ou quando o gestor estiver visivelmente ocupado. Prefira início ou fim de semana.</p>
+          </div>
+        </div>
+        <div class="approach-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Seja objetivo na proposta</h4>
+            <p>Explique em poucas palavras: "Gostaria de reservar 15 minutos semanais para alinhamento e status das minhas entregas." Simples e direto.</p>
+          </div>
+        </div>
+        <div class="approach-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Mostre o valor para o gestor</h4>
+            <p>Destaque que a reunião será breve e estruturada — e que vai facilitar a visibilidade dele também. Gestores valorizam colaboradores proativos.</p>
+          </div>
+        </div>
+        <div class="approach-step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h4>Sugira uma recorrência</h4>
+            <p>Proponha uma agenda fixa — semanal às terças, ou quinzenal às sextas. A consistência é o que transforma um encontro isolado em prática de desenvolvimento.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="approach-aside fade-up">
+        <div class="msg-template">
+          <div class="msg-template-header">
+            <svg width="16" height="16"><use href="#ic-mail"/></svg>
+            <span>Sugestão de mensagem</span>
+          </div>
+          <div style="padding:1.5rem">
+            <div class="msg-template-body">
+              "Olá [gestor], gostaria de propor uma conversa rápida semanal — uns 15 minutos — para alinharmos prioridades e eu trazer um status das atividades. Acredito que vai facilitar para os dois. O que acha?"
+            </div>
+          </div>
+        </div>
+
+        <div class="avoid-card">
+          <h4>
+            <svg width="14" height="14"><use href="#ic-warning"/></svg>
+            O que evitar
+          </h4>
+          <div class="avoid-list">
+            <div class="avoid-item">
+              <svg width="14" height="14"><use href="#ic-x"/></svg>
+              Chegar sem pauta definida — parece improvisado
+            </div>
+            <div class="avoid-item">
+              <svg width="14" height="14"><use href="#ic-x"/></svg>
+              Transformar em sessão de queixas — foge do objetivo
+            </div>
+            <div class="avoid-item">
+              <svg width="14" height="14"><use href="#ic-x"/></svg>
+              Pedir muito tempo logo de início — comece com 15 min
+            </div>
+            <div class="avoid-item">
+              <svg width="14" height="14"><use href="#ic-x"/></svg>
+              Abordar em momento de crise — escolha o timing certo
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-inner"><div class="footer-logo">Quick-Check</div><div class="footer-note">Guia prático · Alinhamento contínuo</div></div></div></footer>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     DICAS
+══════════════════════════════════════════════════════ -->
+<section class="section" id="tips">
+  <div class="container">
+    <div style="padding: 3.5rem 0 0">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Boas práticas · 04</div>
+    </div>
+
+    <div class="sec-header-centered fade-up" style="margin-top:1.5rem">
+      <h2 class="display-lg">Dicas para <em>arrasar</em></h2>
+      <p class="body-lg">Pequenos hábitos que fazem uma enorme diferença na qualidade de cada conversa.</p>
+    </div>
+
+    <div class="tips-grid stagger">
+      <div class="tip-card">
+        <svg width="22" height="22"><use href="#ic-list"/></svg>
+        <h4>Prepare os pontos principais</h4>
+        <p>Anote 2 a 3 tópicos antes da conversa. Evita esquecimentos e mostra organização ao gestor.</p>
+      </div>
+      <div class="tip-card">
+        <svg width="22" height="22"><use href="#ic-target"/></svg>
+        <h4>Seja objetivo</h4>
+        <p>O Quick-Check tem tempo limitado. Vá direto ao ponto. Se um assunto precisar de mais tempo, agende uma conversa específica.</p>
+      </div>
+      <div class="tip-card">
+        <svg width="22" height="22"><use href="#ic-grid"/></svg>
+        <h4>Use exemplos concretos</h4>
+        <p>Ao invés de "estou com dificuldade", diga "no projeto X, travei no passo Y por causa de Z". Facilita o suporte do gestor.</p>
+      </div>
+      <div class="tip-card">
+        <svg width="22" height="22"><use href="#ic-mic"/></svg>
+        <h4>Escute de verdade</h4>
+        <p>O Quick-Check é via de mão dupla. Quando o gestor falar, ouça com atenção — pode trazer informações valiosas.</p>
+      </div>
+      <div class="tip-card">
+        <svg width="22" height="22"><use href="#ic-flag"/></svg>
+        <h4>Defina próximos passos</h4>
+        <p>Feche com ações claras: quem faz o quê e até quando. Transforma o bate-papo em resultado concreto.</p>
+      </div>
+      <div class="tip-card">
+        <svg width="22" height="22"><use href="#ic-clipboard"/></svg>
+        <h4>Registre o que foi decidido</h4>
+        <p>Anote as ações logo após — nem que seja numa nota rápida. A memória falha, o registro não.</p>
+      </div>
+      <div class="tip-card">
+        <svg width="22" height="22"><use href="#ic-refresh"/></svg>
+        <h4>Revisit o último encontro</h4>
+        <p>Comece revisando o que ficou pendente do anterior. Cria continuidade e demonstra comprometimento.</p>
+      </div>
+      <div class="tip-card">
+        <svg width="22" height="22"><use href="#ic-leaf"/></svg>
+        <h4>Seja aberto a feedback</h4>
+        <p>Receba com curiosidade, não com defensividade. Quem recebe bem, cresce muito mais rápido.</p>
+      </div>
+    </div>
+
+    <div class="qblock fade-up" style="margin-top:3.5rem">
+      <p>A preparação <em>antes</em> do Quick-Check vale tanto quanto a conversa em si. Quem chega preparado, sai com mais.</p>
+      <cite>— Dica de ouro para colaboradores</cite>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-inner"><div class="footer-logo">Quick-Check</div><div class="footer-note">Guia prático · Alinhamento contínuo</div></div></div></footer>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     ROTEIRO
+══════════════════════════════════════════════════════ -->
+<section class="section" id="script">
+  <div class="container">
+    <div style="padding: 3.5rem 0 0">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Roteiro · 05</div>
+    </div>
+
+    <div class="sec-header-centered fade-up" style="margin-top:1.5rem">
+      <h2 class="display-lg">As 4 perguntas <em>essenciais</em></h2>
+      <p class="body-lg">Roteiro simples para conduzir qualquer Quick-Check com alto impacto — do lado do colaborador.</p>
+    </div>
+
+    <div class="script-q-grid stagger">
+      <div class="script-q-card">
+        <div class="script-q-num">01</div>
+        <div class="icon-box ib-orange" style="margin-bottom:1rem">
+          <svg width="18" height="18"><use href="#ic-ok"/></svg>
+        </div>
+        <h4>O que está funcionando bem?</h4>
+        <p>Comece pelo positivo. Compartilhe conquistas e progresso. Cria abertura e reconhece o esforço realizado.</p>
+      </div>
+      <div class="script-q-card">
+        <div class="script-q-num">02</div>
+        <div class="icon-box ib-orange" style="margin-bottom:1rem">
+          <svg width="18" height="18"><use href="#ic-trending"/></svg>
+        </div>
+        <h4>O que pode melhorar?</h4>
+        <p>Seja honesto sobre dificuldades e pontos de atenção — sem auto-punição, com foco em solução.</p>
+      </div>
+      <div class="script-q-card">
+        <div class="script-q-num">03</div>
+        <div class="icon-box ib-blue" style="margin-bottom:1rem">
+          <svg width="18" height="18"><use href="#ic-users"/></svg>
+        </div>
+        <h4>O que preciso do gestor?</h4>
+        <p>A pergunta mais estratégica. Seja específico: apoio em decisões, desbloqueio de recursos, clareza de prioridades.</p>
+      </div>
+      <div class="script-q-card">
+        <div class="script-q-num">04</div>
+        <div class="icon-box ib-green" style="margin-bottom:1rem">
+          <svg width="18" height="18"><use href="#ic-flag"/></svg>
+        </div>
+        <h4>Quais os próximos alinhamentos?</h4>
+        <p>Feche com clareza: o que foi decidido, quem faz o quê, e qual o prazo até o próximo encontro.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="sec-header-centered fade-up">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Visão do gestor</div>
+      <h2 class="display-lg">Roteiro <em>completo</em> da conversa</h2>
+    </div>
+
+    <div class="script-timeline fade-up">
+      <div class="timeline-phase">
+        <div class="phase-left">
+          <svg width="18" height="18"><use href="#ic-play"/></svg>
+          <div class="phase-name">Abertura</div>
+          <div class="phase-duration">2–3 min</div>
+        </div>
+        <div class="phase-right">
+          <div class="phase-q">Como você está?</div>
+          <div class="phase-q">Como foi sua semana / período?</div>
+        </div>
+      </div>
+      <div class="timeline-phase">
+        <div class="phase-left">
+          <svg width="18" height="18"><use href="#ic-clipboard"/></svg>
+          <div class="phase-name">Entregas</div>
+          <div class="phase-duration">~5 min</div>
+        </div>
+        <div class="phase-right">
+          <div class="phase-q">O que foi concluído?</div>
+          <div class="phase-q">O que está em andamento?</div>
+          <div class="phase-q">Existe algum bloqueio?</div>
+        </div>
+      </div>
+      <div class="timeline-phase">
+        <div class="phase-left">
+          <svg width="18" height="18"><use href="#ic-chat"/></svg>
+          <div class="phase-name">Feedback</div>
+          <div class="phase-duration">~5 min</div>
+        </div>
+        <div class="phase-right">
+          <div class="phase-q">O que está indo bem?</div>
+          <div class="phase-q">O que pode melhorar?</div>
+          <div class="phase-q">Algum alinhamento necessário?</div>
+        </div>
+      </div>
+      <div class="timeline-phase">
+        <div class="phase-left">
+          <svg width="18" height="18"><use href="#ic-leaf"/></svg>
+          <div class="phase-name">Desenvolvimento</div>
+          <div class="phase-duration">3–5 min</div>
+        </div>
+        <div class="phase-right">
+          <div class="phase-q">Alguma dificuldade técnica ou comportamental?</div>
+          <div class="phase-q">Precisa de apoio em algo?</div>
+          <div class="phase-q">Próximos passos e prioridades</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-top:3rem">
+      <button class="btn btn-accent" data-goto="impl">
+        <svg width="16" height="16"><use href="#ic-layers"/></svg>
+        Ver o Modelo de Implementação completo
+      </button>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-inner"><div class="footer-logo">Quick-Check</div><div class="footer-note">Guia prático · Alinhamento contínuo</div></div></div></footer>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     IMPLEMENTAÇÃO
+══════════════════════════════════════════════════════ -->
+<section class="section" id="impl">
+  <div class="container">
+
+    <div class="impl-header">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Guia completo · 06</div>
+      <h2 class="display-lg" style="margin-top:1.25rem">Modelo de Implementação <em>Passo a Passo</em></h2>
+      <p class="body-lg" style="margin-top:1rem;max-width:56ch">Tudo que você precisa para colocar o Quick-Check em prática na sua equipe — do zero ao hábito consolidado.</p>
+    </div>
+
+    <div class="impl-steps">
+
+      <!-- Passo 1 -->
+      <div class="impl-step">
+        <div class="impl-step-num"><div class="impl-step-num-inner">1</div></div>
+        <div class="impl-step-body">
+          <h3>Definir o Formato do Quick-Check</h3>
+          <p>Antes de começar, alinhe o formato ideal para a realidade do seu time. Não existe uma fórmula única — o mais importante é que o formato seja sustentável e respeitado por todos.</p>
+          <div class="impl-bullets">
+            <div class="impl-bullet">
+              <svg width="14" height="14"><use href="#ic-refresh"/></svg>
+              <span><strong>Periodicidade:</strong> Semanal ou quinzenal — escolha a frequência que o time consegue manter</span>
+            </div>
+            <div class="impl-bullet">
+              <svg width="14" height="14"><use href="#ic-clock"/></svg>
+              <span><strong>Duração:</strong> 10 a 20 minutos — respeite o tempo combinado</span>
+            </div>
+            <div class="impl-bullet">
+              <svg width="14" height="14"><use href="#ic-message"/></svg>
+              <span><strong>Formato:</strong> Reunião rápida presencial ou online (videochamada)</span>
+            </div>
+            <div class="impl-bullet">
+              <svg width="14" height="14"><use href="#ic-users"/></svg>
+              <span><strong>Participantes:</strong> Colaborador + gestor direto (apenas os dois)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passo 2 -->
+      <div class="impl-step">
+        <div class="impl-step-num"><div class="impl-step-num-inner">2</div></div>
+        <div class="impl-step-body">
+          <h3>Estrutura Padrão da Conversa</h3>
+          <p>Use um roteiro simples para manter consistência. Garante que todos os pontos importantes sejam abordados — sem improvisos.</p>
+          <div class="script-timeline" style="margin-top:1.25rem">
+            <div class="timeline-phase">
+              <div class="phase-left">
+                <svg width="16" height="16"><use href="#ic-play"/></svg>
+                <div class="phase-name">Abertura</div>
+                <div class="phase-duration">2–3 min</div>
+              </div>
+              <div class="phase-right">
+                <div class="phase-q">Como você está?</div>
+                <div class="phase-q">Como foi sua semana / período?</div>
+              </div>
+            </div>
+            <div class="timeline-phase">
+              <div class="phase-left">
+                <svg width="16" height="16"><use href="#ic-clipboard"/></svg>
+                <div class="phase-name">Entregas</div>
+                <div class="phase-duration">~5 min</div>
+              </div>
+              <div class="phase-right">
+                <div class="phase-q">O que foi concluído?</div>
+                <div class="phase-q">O que está em andamento?</div>
+                <div class="phase-q">Existe algum bloqueio?</div>
+              </div>
+            </div>
+            <div class="timeline-phase">
+              <div class="phase-left">
+                <svg width="16" height="16"><use href="#ic-chat"/></svg>
+                <div class="phase-name">Feedback</div>
+                <div class="phase-duration">~5 min</div>
+              </div>
+              <div class="phase-right">
+                <div class="phase-q">O que está indo bem?</div>
+                <div class="phase-q">O que pode melhorar?</div>
+                <div class="phase-q">Algum alinhamento necessário?</div>
+              </div>
+            </div>
+            <div class="timeline-phase">
+              <div class="phase-left">
+                <svg width="16" height="16"><use href="#ic-leaf"/></svg>
+                <div class="phase-name">Desenvolvimento</div>
+                <div class="phase-duration">3–5 min</div>
+              </div>
+              <div class="phase-right">
+                <div class="phase-q">Alguma dificuldade técnica ou comportamental?</div>
+                <div class="phase-q">Precisa de apoio em algo?</div>
+                <div class="phase-q">Próximos passos e prioridades</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passo 3 -->
+      <div class="impl-step">
+        <div class="impl-step-num"><div class="impl-step-num-inner">3</div></div>
+        <div class="impl-step-body">
+          <h3>Definir Ferramenta de Registro</h3>
+          <p>Escolha um meio simples para registrar os pontos principais discutidos. O registro garante continuidade e comprometimento com as ações definidas.</p>
+          <div class="tools-row">
+            <div class="tool-item">
+              <svg width="20" height="20"><use href="#ic-grid"/></svg>
+              Planilha (Excel / Google Sheets)
+            </div>
+            <div class="tool-item">
+              <svg width="20" height="20"><use href="#ic-layers"/></svg>
+              Ferramenta interna da empresa
+            </div>
+            <div class="tool-item">
+              <svg width="20" height="20"><use href="#ic-clipboard"/></svg>
+              Formulário padrão compartilhado
+            </div>
+          </div>
+          <div class="fields-col">
+            <div class="field-row"><svg width="14" height="14"><use href="#ic-calendar"/></svg> Data do Quick-Check</div>
+            <div class="field-row"><svg width="14" height="14"><use href="#ic-person"/></svg> Nome do colaborador</div>
+            <div class="field-row"><svg width="14" height="14"><use href="#ic-chat"/></svg> Principais pontos discutidos</div>
+            <div class="field-row"><svg width="14" height="14"><use href="#ic-check"/></svg> Ações definidas</div>
+            <div class="field-row"><svg width="14" height="14"><use href="#ic-users"/></svg> Responsáveis por cada ação</div>
+            <div class="field-row"><svg width="14" height="14"><use href="#ic-clock"/></svg> Prazo para conclusão</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passo 4 -->
+      <div class="impl-step">
+        <div class="impl-step-num"><div class="impl-step-num-inner">4</div></div>
+        <div class="impl-step-body">
+          <h3>Criar Rotina e Disciplina</h3>
+          <p>A consistência transforma o Quick-Check de boa intenção em hábito real. A prática regular cria confiança e previsibilidade para todos.</p>
+          <div class="impl-bullets">
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-calendar"/></svg><span>Agendar recorrência fixa no calendário — mesma hora, mesmo dia</span></div>
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-shield"/></svg><span>Evitar cancelamentos ao máximo — a consistência é o que gera resultado</span></div>
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-clock"/></svg><span>Manter foco no tempo proposto — respeite os 20 minutos</span></div>
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-flag"/></svg><span>Tratar o compromisso como prioridade, não como "se der"</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passo 5 -->
+      <div class="impl-step">
+        <div class="impl-step-num"><div class="impl-step-num-inner">5</div></div>
+        <div class="impl-step-body">
+          <h3>Papel do Gestor</h3>
+          <p>O gestor define o tom da conversa. Quando demonstra abertura e preparo, o colaborador se sente à vontade para ser honesto.</p>
+          <div class="impl-bullets">
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-mic"/></svg><span>Escutar ativamente — sem distrações, sem celular</span></div>
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-message"/></svg><span>Dar feedback claro, objetivo e construtivo</span></div>
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-target"/></svg><span>Direcionar prioridades com clareza</span></div>
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-eye"/></svg><span>Identificar riscos antecipadamente e agir de forma preventiva</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passo 6 -->
+      <div class="impl-step">
+        <div class="impl-step-num"><div class="impl-step-num-inner">6</div></div>
+        <div class="impl-step-body">
+          <h3>Papel do Colaborador</h3>
+          <p>O colaborador também tem responsabilidade ativa no Quick-Check. A postura proativa é o que faz a diferença entre um encontro superficial e uma conversa de alto impacto.</p>
+          <div class="roles-grid">
+            <div class="role-panel">
+              <h5>
+                <svg width="12" height="12"><use href="#ic-check"/></svg>
+                Faça
+              </h5>
+              <div class="role-item"><svg width="13" height="13"><use href="#ic-ok"/></svg>Trazer o status real das atividades</div>
+              <div class="role-item"><svg width="13" height="13"><use href="#ic-ok"/></svg>Compartilhar dificuldades com honestidade</div>
+              <div class="role-item"><svg width="13" height="13"><use href="#ic-ok"/></svg>Estar aberto a feedback</div>
+              <div class="role-item"><svg width="13" height="13"><use href="#ic-ok"/></svg>Propor melhorias quando possível</div>
+              <div class="role-item"><svg width="13" height="13"><use href="#ic-ok"/></svg>Chegar preparado com pontos principais</div>
+            </div>
+            <div class="role-panel">
+              <h5>
+                <svg width="12" height="12"><use href="#ic-warning"/></svg>
+                Evite
+              </h5>
+              <div class="role-item warn"><svg width="13" height="13"><use href="#ic-minus"/></svg>Omitir problemas por receio</div>
+              <div class="role-item warn"><svg width="13" height="13"><use href="#ic-minus"/></svg>Transformar em sessão de queixas</div>
+              <div class="role-item warn"><svg width="13" height="13"><use href="#ic-minus"/></svg>Chegar sem ter pensado sobre a semana</div>
+              <div class="role-item warn"><svg width="13" height="13"><use href="#ic-minus"/></svg>Aceitar feedback de forma defensiva</div>
+              <div class="role-item warn"><svg width="13" height="13"><use href="#ic-minus"/></svg>Sair sem definir próximos passos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passo 7 -->
+      <div class="impl-step">
+        <div class="impl-step-num"><div class="impl-step-num-inner">7</div></div>
+        <div class="impl-step-body">
+          <h3>Acompanhamento das Ações</h3>
+          <p>O Quick-Check só gera valor real quando as ações definidas são acompanhadas. Sem esse ciclo, a conversa se torna apenas um ritual vazio.</p>
+          <div class="impl-bullets">
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-refresh"/></svg><span>Começar cada sessão revisando as ações do encontro anterior</span></div>
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-trending"/></svg><span>Garantir evolução nos pontos discutidos de forma construtiva</span></div>
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-map"/></svg><span>Ajustar rota quando necessário, sem julgamentos</span></div>
+            <div class="impl-bullet"><svg width="14" height="14"><use href="#ic-zap"/></svg><span>Celebrar as entregas concluídas — reconhecimento importa</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passo 8 -->
+      <div class="impl-step">
+        <div class="impl-step-num"><div class="impl-step-num-inner">8</div></div>
+        <div class="impl-step-body">
+          <h3>Indicadores de Sucesso</h3>
+          <p>Como saber se o Quick-Check está funcionando? Acompanhe os sinais que mostram que a prática está gerando resultado real.</p>
+          <div class="indicators-strip" style="margin-top:1.25rem">
+            <div class="indicator-card">
+              <svg width="24" height="24"><use href="#ic-trending"/></svg>
+              <h4>Menos retrabalho</h4>
+              <p>Menos erros por falta de comunicação</p>
+            </div>
+            <div class="indicator-card">
+              <svg width="24" height="24"><use href="#ic-target"/></svg>
+              <h4>Clareza nas entregas</h4>
+              <p>Expectativas bem definidas e acordadas</p>
+            </div>
+            <div class="indicator-card">
+              <svg width="24" height="24"><use href="#ic-zap"/></svg>
+              <h4>Mais engajamento</h4>
+              <p>Pessoas que se sentem ouvidas produzem mais</p>
+            </div>
+            <div class="indicator-card">
+              <svg width="24" height="24"><use href="#ic-link"/></svg>
+              <h4>Comunicação fluida</h4>
+              <p>Menos barreiras entre equipe e gestão</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /impl-steps -->
+
+    <div class="divider"></div>
+
+    <div class="sec-header-centered fade-up">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Para fechar</div>
+      <h2 class="display-lg">Boas práticas <em>essenciais</em></h2>
+    </div>
+
+    <div class="bp-grid stagger">
+      <div class="bp-item"><svg width="16" height="16"><use href="#ic-shield"/></svg>Manter ambiente aberto e sem julgamentos em todos os momentos</div>
+      <div class="bp-item"><svg width="16" height="16"><use href="#ic-clock"/></svg>Evitar que o Quick-Check se transforme em uma reunião longa e cansativa</div>
+      <div class="bp-item"><svg width="16" height="16"><use href="#ic-target"/></svg>Focar sempre em objetividade — ir direto ao que importa</div>
+      <div class="bp-item"><svg width="16" height="16"><use href="#ic-clipboard"/></svg>Registrar apenas o essencial — o registro deve facilitar, não burocratizar</div>
+      <div class="bp-item"><svg width="16" height="16"><use href="#ic-refresh"/></svg>Manter a consistência acima da perfeição — feito é melhor que perfeito</div>
+      <div class="bp-item"><svg width="16" height="16"><use href="#ic-leaf"/></svg>Tratar o Quick-Check como investimento em pessoas — não como tarefa</div>
+    </div>
+
+    <div class="qblock fade-up" style="margin-top:3.5rem">
+      <p>O Quick-Check é simples por design. Sua força está na <em>consistência</em> — não na complexidade.</p>
+      <cite>— Mantenha a prática. Os resultados chegam.</cite>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Quick-Check</div>
+        <div class="footer-note">Guia prático · Alinhamento contínuo entre colaboradores e gestão</div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
