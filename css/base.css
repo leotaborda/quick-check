@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=Inter:wght@300;400;500;600;700;800&family=DM+Mono:wght@300;400&display=swap");
 
 /*
   TASTE-SKILL DIALS
@@ -8,34 +8,38 @@
 */
 
 :root {
-  /* Warm cream — fundo de papel artesanal */
-  --bg: #f6f1e9;
-  --bg-2: #ede7da;
-  --bg-3: #e5ddd0;
-  --surface: #ffffff;
-  --surface-2: #faf7f2;
+  /* Tech palette — clean, trustworthy, modern */
+  --bg: #F8FAFC;
+  --bg-2: #F1F5F9;
+  --bg-3: #E2E8F0;
+  --surface: #FFFFFF;
+  --surface-2: #F8FAFC;
 
-  --border: rgba(180, 160, 130, 0.25);
-  --border-mid: rgba(180, 160, 130, 0.45);
-  --border-hi: rgba(180, 160, 130, 0.7);
+  --border: rgba(15, 23, 42, 0.07);
+  --border-mid: rgba(15, 23, 42, 0.12);
+  --border-hi: rgba(15, 23, 42, 0.24);
 
-  --ink: #1c1610;
-  --ink-2: rgba(28, 22, 16, 0.6);
-  --ink-3: rgba(28, 22, 16, 0.35);
+  --ink: #0F172A;
+  --ink-2: #64748B;
+  --ink-3: #94A3B8;
 
-  /* Orange accent — a identidade */
-  --accent: #e05c2a;
-  --accent-dim: rgba(224, 92, 42, 0.1);
-  --accent-glow: rgba(224, 92, 42, 0.22);
-  --accent-dark: #c04a1e;
+  /* Primary — tech blue */
+  --accent: #2563EB;
+  --accent-dim: rgba(37, 99, 235, 0.07);
+  --accent-glow: rgba(37, 99, 235, 0.22);
+  --accent-dark: #1D4ED8;
 
   /* Supporting colours */
-  --accent-2: #2a7be0; /* azul */
-  --accent-3: #2abf96; /* verde-água */
-  --accent-4: #d4a017; /* âmbar */
+  --accent-2: #38BDF8;  /* cyan — secondary details */
+  --accent-3: #22C55E;  /* green — action / confirm */
+  --accent-4: #FACC15;  /* yellow — alert / badge */
+
+  /* Action button (green) shades used in btn-accent */
+  --green-dark: #16A34A;
+  --green-glow: rgba(34, 197, 94, 0.24);
 
   --f-display: "Fraunces", Georgia, serif;
-  --f-ui: "DM Sans", system-ui, sans-serif;
+  --f-ui: "Inter", system-ui, sans-serif;
   --f-mono: "DM Mono", "Courier New", monospace;
 
   --r-sm: 10px;
@@ -44,9 +48,9 @@
   --r-xl: 36px;
   --r-pill: 999px;
 
-  --shadow-sm: 0 2px 8px rgba(28, 22, 16, 0.07);
-  --shadow-card: 0 4px 20px rgba(28, 22, 16, 0.09);
-  --shadow-float: 0 16px 48px rgba(28, 22, 16, 0.14);
+  --shadow-sm: 0 2px 8px rgba(15, 31, 53, 0.06);
+  --shadow-card: 0 4px 20px rgba(15, 31, 53, 0.08);
+  --shadow-float: 0 16px 48px rgba(15, 31, 53, 0.12);
 
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -106,7 +110,7 @@ button {
   border-radius: 99px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+  background: var(--accent-dark);
 }
 
 /* grain texture sutil */
@@ -117,5 +121,5 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 9998;
-  opacity: 0.6;
+  opacity: 0.25;
 }

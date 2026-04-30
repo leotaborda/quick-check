@@ -160,7 +160,7 @@
     <span class="nav-link" data-section="what">O que é</span>
     <span class="nav-link" data-section="benefits">Benefícios</span>
     <span class="nav-link" data-section="approach">Como abordar</span>
-    <span class="nav-link" data-section="tips">Dicas</span>
+    <span class="nav-link" data-section="tips">Boas Práticas</span>
     <span class="nav-link" data-section="script">Roteiro</span>
   </div>
 
@@ -197,7 +197,7 @@
             </p>
             <div class="hero-actions">
               <button class="btn btn-primary" data-goto="what">
-                Explorar o guia
+                Conhecer a Metodologia
                 <svg width="16" height="16"><use href="#ic-arrow-right"/></svg>
               </button>
               <button class="btn btn-ghost" data-goto="impl">
@@ -266,7 +266,7 @@
     <!-- Overview cards -->
     <div class="sec-header-centered fade-up">
       <div class="eyebrow"><span class="eyebrow-dot"></span>Explore o guia</div>
-      <h2 class="display-lg">Tudo que você precisa <em>saber</em></h2>
+      <h2 class="display-lg">Visão Geral do <em>Método</em></h2>
       <p class="body-lg">Navegue pelos tópicos e aprenda como o Quick-Check pode transformar a comunicação do seu time.</p>
     </div>
 
@@ -313,7 +313,7 @@
           <svg width="18" height="18"><use href="#ic-bolt"/></svg>
         </div>
         <div class="ov-label">Boas práticas</div>
-        <div class="ov-title">Dicas para arrasar</div>
+        <div class="ov-title">Boas Práticas</div>
         <div class="ov-arrow" style="margin-top:0.75rem">
           Ver <svg width="14" height="14"><use href="#ic-arrow-right"/></svg>
         </div>
@@ -373,66 +373,95 @@
     </div>
 
     <div class="what-split">
-      <!-- Visual: chat window -->
+      <!-- Visual: interactive phone demo -->
       <div class="what-visual fade-up">
-        <div class="chat-window">
-          <div class="chat-topbar">
-            <div class="chat-dots">
-              <div class="chat-dot"></div><div class="chat-dot"></div><div class="chat-dot"></div>
-            </div>
-            <div class="chat-topbar-label">Quick-Check · Terça, 10h05</div>
-          </div>
-          <div class="chat-messages">
-            <div class="chat-msg recv">
-              <div class="chat-msg-from">Gestor</div>
-              <div class="chat-bubble">Oi! Como você está? Como foi a semana?</div>
-              <div class="chat-msg-time">10:05</div>
-            </div>
-            <div class="chat-msg sent">
-              <div class="chat-msg-from">Colaborador</div>
-              <div class="chat-bubble">Boa semana! Entreguei o relatório. Mas travei no item X — preciso de apoio nisso.</div>
-              <div class="chat-msg-time">10:06</div>
-            </div>
-            <div class="chat-msg recv">
-              <div class="chat-msg-from">Gestor</div>
-              <div class="chat-bubble">Ótimo pela entrega! Vou priorizar o desbloqueio do X com você ainda hoje.</div>
-              <div class="chat-msg-time">10:08</div>
-            </div>
-            <div class="chat-msg sent">
-              <div class="chat-msg-from">Colaborador</div>
-              <div class="chat-bubble">Perfeito. E quais são as prioridades da próxima semana?</div>
-              <div class="chat-msg-time">10:09</div>
-            </div>
-            <div class="chat-msg recv">
-              <div class="chat-msg-from">Gestor</div>
-              <div class="chat-bubble">Foco total no projeto Y. Detalho na reunião às 14h. Ótimo Quick-Check!</div>
-              <div class="chat-msg-time">10:11</div>
-            </div>
-          </div>
-        </div>
+        <div class="phone-outer">
 
-        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1.25rem">
-          <div class="tag tag-amber">
-            <svg width="11" height="11"><use href="#ic-shield"/></svg>
-            Sem cobrança
+          <!-- ── Phone Frame ── -->
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+
+              <!-- Status bar -->
+              <div class="phone-statusbar">
+                <span>10:05</span>
+                <div class="phone-statusbar-icons">
+                  <!-- Signal bars -->
+                  <svg width="12" height="10" viewBox="0 0 16 12" fill="currentColor" aria-hidden="true">
+                    <rect x="0"  y="6" width="3" height="6" rx="1"/>
+                    <rect x="4.5" y="4" width="3" height="8" rx="1"/>
+                    <rect x="9"  y="1.5" width="3" height="10.5" rx="1"/>
+                    <rect x="13.5" y="0" width="2.5" height="12" rx="1" opacity=".3"/>
+                  </svg>
+                  <!-- Wi-Fi -->
+                  <svg width="13" height="10" viewBox="0 0 18 13" fill="currentColor" aria-hidden="true">
+                    <path d="M9 10.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"/>
+                    <path d="M4.8 7.5C6 6.3 7.4 5.6 9 5.6s3 .7 4.2 1.9l1.4-1.4C12.9 4.4 11 3.6 9 3.6S5.1 4.4 3.4 6.1l1.4 1.4z"/>
+                    <path d="M1.5 5C3.5 3 6.1 1.7 9 1.7s5.5 1.3 7.5 3.3l1.4-1.5C15.5 1.2 12.4 0 9 0S2.5 1.2.1 3.5L1.5 5z" opacity=".4"/>
+                  </svg>
+                  <!-- Battery -->
+                  <svg width="20" height="10" viewBox="0 0 22 11" fill="currentColor" aria-hidden="true">
+                    <rect x="0" y="0.5" width="18" height="10" rx="2.5" opacity=".25"/>
+                    <rect x="0.8" y="1.3" width="13" height="8.4" rx="1.8"/>
+                    <rect x="19" y="3" width="2.5" height="5" rx="1.25"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- App header -->
+              <div class="phone-appbar">
+                <div class="phone-appbar-avatar">G</div>
+                <div>
+                  <div class="phone-appbar-name">Gestor · Quick-Check</div>
+                  <div class="phone-appbar-online">
+                    <span class="phone-online-dot"></span>Online agora
+                  </div>
+                </div>
+              </div>
+
+              <!-- Messages area -->
+              <div class="phone-msgs" id="phoneMessages">
+                <div class="phone-day-sep">Terça-feira · 10:00</div>
+                <div class="phone-msg recv">
+                  <div class="phone-bubble">Oi! Pronto para o Quick-Check de hoje? 😊</div>
+                  <span class="phone-ts">10:01</span>
+                </div>
+              </div>
+
+              <!-- Typing indicator (hidden by default) -->
+              <div class="phone-typing" id="phoneTyping">
+                <div class="phone-typing-bubble">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+
+              <!-- Input bar -->
+              <div class="phone-inputbar">
+                <div class="phone-input-fake">Escolha uma mensagem abaixo...</div>
+                <button class="phone-send-fake" aria-label="Enviar">
+                  <svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor"><path d="M2.5 2L18 10 2.5 18V12.5L14 10 2.5 7.5V2z"/></svg>
+                </button>
+              </div>
+
+            </div><!-- /phone-screen -->
+          </div><!-- /phone-frame -->
+
+          <!-- ── Choice buttons ── -->
+          <div class="phone-choices-panel">
+            <div class="phone-choices-heading" id="phoneChoicesHeading">
+              <svg width="12" height="12"><use href="#ic-message"/></svg>
+              <span id="phoneChoicesLabel">Como você inicia o Quick-Check?</span>
+            </div>
+            <div class="phone-choices" id="phoneChoices">
+              <!-- populated by JS -->
+            </div>
+            <button class="phone-reset" id="phoneReset">
+              <svg width="13" height="13"><use href="#ic-refresh"/></svg>
+              Nova simulação
+            </button>
           </div>
-          <div class="tag tag-amber">
-            <svg width="11" height="11"><use href="#ic-ok"/></svg>
-            Sem julgamento
-          </div>
-          <div class="tag tag-amber">
-            <svg width="11" height="11"><use href="#ic-target"/></svg>
-            Foco em alinhamento
-          </div>
-          <div class="tag tag-green">
-            <svg width="11" height="11"><use href="#ic-refresh"/></svg>
-            Feedback contínuo
-          </div>
-          <div class="tag tag-blue">
-            <svg width="11" height="11"><use href="#ic-bolt"/></svg>
-            Suporte real
-          </div>
-        </div>
+
+        </div><!-- /phone-outer -->
       </div>
 
       <!-- Text -->
@@ -722,8 +751,8 @@
     </div>
 
     <div class="sec-header-centered fade-up" style="margin-top:1.5rem">
-      <h2 class="display-lg">Dicas para <em>arrasar</em></h2>
-      <p class="body-lg">Pequenos hábitos que fazem uma enorme diferença na qualidade de cada conversa.</p>
+      <h2 class="display-lg">Boas Práticas de <em>Alta Performance</em></h2>
+      <p class="body-lg">Práticas consolidadas que elevam a qualidade e o impacto de cada conversa.</p>
     </div>
 
     <div class="tips-grid stagger">
@@ -759,7 +788,7 @@
       </div>
       <div class="tip-card">
         <svg width="22" height="22"><use href="#ic-refresh"/></svg>
-        <h4>Revisit o último encontro</h4>
+        <h4>Revise o encontro anterior</h4>
         <p>Comece revisando o que ficou pendente do anterior. Cria continuidade e demonstra comprometimento.</p>
       </div>
       <div class="tip-card">
@@ -770,8 +799,8 @@
     </div>
 
     <div class="qblock fade-up" style="margin-top:3.5rem">
-      <p>A preparação <em>antes</em> do Quick-Check vale tanto quanto a conversa em si. Quem chega preparado, sai com mais.</p>
-      <cite>— Dica de ouro para colaboradores</cite>
+      <p>A preparação <em>antes</em> do Quick-Check vale tanto quanto a conversa em si. Quem chega preparado, conduz com mais qualidade.</p>
+      <cite>— Princípio de alto impacto</cite>
     </div>
   </div>
 
